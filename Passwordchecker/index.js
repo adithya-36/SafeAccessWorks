@@ -1,6 +1,18 @@
 var pass = document.getElementById("password")
 var msg = document.getElementById("message")
 var str = document.getElementById("strength")
+let eyeIcon = document.getElementById("eye-icon");
+let password = document.getElementById("password")
+eyeIcon.onclick = function(){
+  if(password.type == "password"){
+    password.type = "text";
+    eyeIcon.src ="images/eye.png";
+  }
+  else{
+    password.type = "password";
+    eyeIcon.src ="images/hide.png";
+  }
+}
 pass.addEventListener('input', () =>{
   if(pass.value.length > 0){
     msg.style.display = "block";
